@@ -1,0 +1,18 @@
+HTML SCRIPT
+let chars = [];
+document.querySelectorAll('code').forEach(codeTag => {
+    codeTag.querySelectorAll('div').forEach(divTag => {
+        divTag.querySelectorAll('span').forEach(spanTag => {
+            const ielement = spanTag.querySelector('i');
+            if (ielement && ielement.hasAttribute("value")) {
+                chars.push(ielement.getAttribute("value"));
+            }
+        });
+    });
+});
+
+let hiddenUrl = chars.join('');
+console.log("url:", hiddenUrl);
+
+FINAL URL
+https://wgg522pwivhvi5gqsn675gth3q0otdja.lambda-url.us-east-1.on.aws/727562
